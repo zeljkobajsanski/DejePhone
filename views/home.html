@@ -1,0 +1,21 @@
+﻿<div data-options="dxView : { name: 'home', title: 'Pretraga' } ">
+    <div data-bind="dxCommand: { id: 'edit', icon: 'close', action: ponisti }"></div>
+    <div data-bind="dxCommand: { id: 'create', icon: 'find', action: pretrazi }"></div>
+    <div class="home" data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div class="dx-fieldset">
+            <div class="dx-field">
+                <div class="dx-field-label" data-bind="text: udaljenostM"></div>
+                <div class="dx-field-value">
+                    <div data-bind="dxSlider: { max: 10000, step: 100, value: udaljenost }"></div>
+                </div>
+            </div>
+            <div class="dx-field">
+                <div class="dx-field-label">Pojam</div>
+                <div class="dx-field-value">
+                    <div data-bind="dxTextBox: { value: pojam }"></div>
+                </div>
+            </div>
+        </div>
+        <div data-bind="dxLoadPanel: { message: 'Detekcija pozicije u toku...', visible: loadPanelVisible }"></div>
+    </div>
+</div>

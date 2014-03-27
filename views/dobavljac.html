@@ -1,0 +1,18 @@
+﻿<div data-options="dxView: {name : 'dobavljac', title: ''}">
+    <div data-bind="dxCommand: {id: 'create', icon: icon, action: promeniPrikaz}"></div>
+    <div data-bind="dxCommand: {id: 'edit', icon: 'tel', action: pozovi}"></div>
+    <div data-options="dxContent : { targetPlaceholder: 'content' }">
+        <div data-bind="visible: icon() === 'food'">
+            
+        </div>
+        <div data-bind="visible: icon() === 'info', dxList: { dataSource: ponuda, grouped: true }">
+            <div data-options="dxTemplate: {name: 'item'}" style="position: relative">
+                <img data-bind="attr: {src: Slika}" width="80" height="80" style="float: left; margin-right: 4px;"/>
+                <h3 data-bind="text: Naziv" style="text-align: left"></h3>
+                <p data-bind="text: Opis" style="color: silver;"></p>
+                <span style="position: absolute; right: 4px; bottom: 4px;" data-bind="text: Cena"></span>
+                <div style="clear: both"></div>
+            </div>
+        </div>
+    </div>
+</div>

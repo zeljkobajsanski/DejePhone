@@ -1,0 +1,14 @@
+﻿<div data-options="dxView: { name: 'dobavljaci', title: 'Restorani' }">
+    <div data-bind="dxCommand: { id: 'edit', icon: prikaz, action: promeniPrikaz}"></div>
+    <div data-options="dxContent : { targetPlaceholder: 'content' }">
+        <div data-bind="dxList: { dataSource: dobavljaci, autoPagingEnabled: false, pullRefreshEnabled: true }, visible: prikaz() === 'globe'">
+            <div data-options="dxTemplate: {name: 'item'}"  data-bind="dxAction: $root.prikaziDobavljaca" style="position: relative">
+                <h3 data-bind="text: Naziv"></h3>
+                <p data-bind="text: Opis" style="color: silver"></p>
+                <span data-bind="text: Udaljenost" style="position: absolute; right: 32px; top: 10px;"></span>
+            </div>
+        </div>
+        <div data-bind="dxMap: { width: '100%', height: '100%', provider: 'bing', key: mapKey, zoom: zoom, location: myPosition, markers: markers }, visible: prikaz() === 'menu'"></div>
+        <div data-bind="dxLoadPanel: { message: 'Pretraga u toku...', visible: loadPanelVisible }"></div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+﻿<div data-options="dxView : { name: 'kategorije', title: 'Kategorije' } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' }">
+        <div data-bind="dxList: {
+            dataSource: kategorije, autoPagingEnabled: true, pullRefreshEnabled: true, clickAction: pretraziKategoriju}">
+            <div data-options="dxTemplate: { name: 'item' }" data-bind="dxAction: $root.pretraziKategoriju" style="position: relative">
+                <span data-bind="text: naziv"></span>
+                <div data-bind="text: count" style="position: absolute; right: 30px; top: 14px"></div>
+            </div>
+        </div>
+    </div>
+
+</div>

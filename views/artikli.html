@@ -1,0 +1,11 @@
+﻿<div data-options="dxView: { name: 'artikli', title: 'Artikli' }">
+    <div data-options="dxContent : { targetPlaceholder: 'content' }">
+        <div data-bind="dxList: { dataSource: artikli, autoPagingEnabled: true, pullRefreshEnabled: true }">
+            <div data-options="dxTemplate: { name: 'item' }" data-bind="dxAction: $root.izabranArtikal" style="position: relative">
+                <img data-bind="attr: { src: Slika }" width="80" height="80" />
+                <span data-bind="text: Naziv" style="position: absolute; left: 100px;"></span>
+                <p data-bind="text: Opis" style="position: absolute; top: 36px; left: 100px; right: 10px; color: silver"></p>
+            </div>
+        </div>
+    </div>
+</div>
