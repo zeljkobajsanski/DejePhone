@@ -2,6 +2,7 @@
     "use strict";
     
     document.addEventListener('deviceready', function() {
+	DevExpress.ui.notify(navigator.connection.type);
         if (navigator.connection.type === Connection.NONE) {
             DevExpress.ui.dialog.alert("Uključite Internet konekciju", Deje.ALERT_TITLE).done(function() {
                 window.plugins.webintent.startActivity({ action: 'android.settings.DATA_ROAMING_SETTINGS' });
